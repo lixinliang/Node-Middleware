@@ -1,0 +1,18 @@
+{
+    "title": "用户接口",
+    "version": "1.0.0",
+    "engine": "mockjs",
+    "rulebase": "./interfaceRules/",
+    "status": "online",
+    "interfaces": [{
+        "name": "获取用户",
+        "id": "Users.getUsers",
+        "encoding": "utf8",
+        "method": "post",
+        "urls": {
+            "online": "http://172.16.42.216/h5builder/user.php"
+        },
+        "ruleFile": "Users.getUsers.rule.json",
+        "status": "mock"
+    }]
+}
