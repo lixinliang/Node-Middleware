@@ -4,9 +4,9 @@
 <br/>
 
 ### 背景
-对于大多数项目，前端往往的表现形式是完成HTML/CSS/JS开发后通过转为动态后端语言，如：JSP、PHP等，去参与到项目中。
+大多数项目，前端工程师往往参与项目的表现形式是完成HTML/CSS/JS开发后通过转为动态后端语言，如：JSP、PHP等。页面的大部分优化工作都离不开后端工程师的参与。后期维护、测试前端bug等，也需要前端工程师配置后端环境实现。前端开发者处于被动，依赖后端工程师的情况中。
 
-[淘宝UED关于前后端分离思想及其实现方式](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/)
+前后端分离思想的提出，正是为了解决以上前后端耦合度高、职责不清的问题。阿里也提及到[淘宝UED关于前后端分离思想及其实现方式](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/)
 
 <br/>
 
