@@ -5,14 +5,12 @@
     "rulebase": "./interfaceRules/",
     "status": "online",
     "interfaces": [{
-        "name": "获取用户",
-        "id": "Users.getUsers",
+        "name": "获取页面",
+        "id": "Page.getPageById",
         "encoding": "utf8",
         "method": "post",
         "urls": {
-            "online": "http://172.16.42.216/h5builder/user.php"
-        },
-        "ruleFile": "Users.getUsers.rule.json",
-        "status": "mock"
+            "online": "http://localhost/h5builder/getPageById.php"
+        }
     }]
 }
