@@ -1,5 +1,5 @@
 # Node-Middleware
-基于Node的前后端分离架构
+前后端分离架构 — 基于Node的中间层。
 
 <br/>
 
