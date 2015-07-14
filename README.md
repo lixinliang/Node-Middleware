@@ -2,17 +2,23 @@
 基于Node的前后端分离架构
 
 
+<br/>
+
 ### 背景
 [淘宝UED关于前后端分离思想及其实现方式](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/)
 
 
+<br/>
+
 
 ### 技术基础
-1. EJS
-2. NodeJS & Express
-3. ModelProxy
-4. MockJS
+1. [EJS](http://www.embeddedjs.com/)
+2. [NodeJS & Express](https://nodejs.org/)
+3. [ModelProxy](https://github.com/carlisliu/modelproxy)
+4. [MockJS](http://mockjs.com/)
 
+
+<br/>
 
 
 ### 目录架构
@@ -43,6 +49,9 @@
     ├── interface.json              // modelproxy 配置信息
     └── app.js                      // 全局入口
 
+
+
+<br/>
 
 
 
