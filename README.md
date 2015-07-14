@@ -4,6 +4,8 @@
 <br/>
 
 ### 背景
+对于大多数项目，前端往往的表现形式是完成HTML/CSS/JS开发后通过转为动态后端语言，如：JSP、PHP等，去参与到项目中。
+
 [淘宝UED关于前后端分离思想及其实现方式](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/)
 
 <br/>
