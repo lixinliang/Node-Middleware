@@ -15,6 +15,16 @@
 2. [NodeJS & Express](https://nodejs.org/)
 3. [ModelProxy](https://github.com/carlisliu/modelproxy)
 4. [MockJS](http://mockjs.com/)
+5. [Gulp](http://www.gulpjs.com.cn/)
+6. [bower](http://bower.io/)
+
+<br/>
+
+
+### 工作流相关
+1. 监听Sass文件，实时编译压缩
+2. 监听public资源模块文件改动，实时刷新
+
 
 <br/>
 
