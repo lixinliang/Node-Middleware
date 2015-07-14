@@ -11,6 +11,8 @@
         "method": "post",
         "urls": {
             "online": "http://localhost/h5builder/getPageById.php"
-        }
+        },
+        "status": "mock",
+        "ruleFile": "page.getPageById.rule.json"
     }]
 }

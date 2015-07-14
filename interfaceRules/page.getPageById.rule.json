@@ -1,0 +1,16 @@
+{
+    "request":{
+        "id": "1"
+    },
+    "response":{
+        "page":[
+            {
+                "id": "1",
+                "content": "aaaaaaaaaaaaaa"
+            }
+        ]
+    },
+    "responseError":{
+        "CODE": "500"
+    }
+}
