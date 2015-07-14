@@ -16,7 +16,7 @@
 3. [ModelProxy](https://github.com/carlisliu/modelproxy)
 4. [MockJS](http://mockjs.com/)
 5. [Gulp](http://www.gulpjs.com.cn/)
-6. [bower](http://bower.io/)
+6. [Bower](http://bower.io/)
 
 <br/>
 
