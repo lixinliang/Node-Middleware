@@ -1,11 +1,6 @@
-module.exports = function(app,ModelProxy){
+module.exports = function(app,modelSet){
     app.get('/',function(req,res){
-
-        // 创建model
-        var pageModel = new ModelProxy({
-            getPageById: 'Page.getPageById'
-        });
-        pageModel.getPageById({'id':'1'})
+        modelSet.page.getPageById({'id':'1'})
         .done(function(data) {
             console.log(data);
         })

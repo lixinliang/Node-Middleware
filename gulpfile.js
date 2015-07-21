@@ -4,54 +4,55 @@ var plugins = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var nodemon = require('gulp-nodemon');
-
+// 编译sass文件任务
 gulp.task('sass', function() {
     function sassCompile4nix(){
         function handler(){
             return plugins.notify.onError({
                 title:'sass编译错误',
                 message:'<%=error.message%>'
-            })
+            });
         }
-        return plugins.sass().on('error', handler())
+        return plugins.sass().on('error', handler());
     }
     return gulp.src('public/sass/*.scss')
         .pipe(sassCompile4nix())
         .pipe(plugins.autoprefixer({browsers: ['> 0%']}))
         .pipe(plugins.minifyCss())
         .pipe(gulp.dest('public/css'))
-})
-
-var BROWSER_SYNC_RELOAD_DELAY = 500;
+        .pipe(reload({stream: true}));
+});
+// 服务程序入口
 gulp.task('nodemon', function (cb) {
     var called = false;
     return nodemon({
                 script: 'app.js',
-                watch: ['app.js']
+                ext: 'ejs js',
+                ignore: ['public/**'],
+                env: {'NODE_ENV': 'development'}
     })
     .on('start', function onStart() {
         if(!called){cb();}
             called = true;
         })
-    .on('restart', function onRestart() {
-        setTimeout(function reload() {
-            browserSync.reload({
-                stream: true
-        });
-    }, BROWSER_SYNC_RELOAD_DELAY);
+    .on('restart', function() {
+        setTimeout(function() {
+            console.log('-------- restart --------');
+          reload({stream: false});
+        }, 1000);
     });
 });
-
-gulp.task('browser-sync', ['nodemon'], function () {
+// 监听服务变化
+gulp.task('browser-sync', ['nodemon'], function(){
     browserSync.init({
         files: ['public/**'],
         proxy: 'http://localhost:3000',
         port: 4000,
-        browser: ['/Applications/Google\ Chrome\ Canary.app/']
+        browser: ['/Applications/Google\ Chrome\ Canary.app/'],
+        notify: true,
     });
 });
-
-
+// 设置默认任务
 gulp.task('default',['browser-sync'], function(){
-    gulp.watch('public/sass/**', ['sass'])
-})
+    gulp.watch('public/sass/**', ['sass']);
+});

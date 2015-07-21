@@ -22,8 +22,9 @@
 
 
 ### 工作流相关
-1. 监听Sass文件，实时编译压缩
-2. 监听public资源模块文件改动，实时刷新
+1. 监听Sass文件，实时编译压缩。
+2. 监听public资源模块文件改动，实时刷新。
+3. 监听EJS、JS资源（除公共JS资源以外）实时重启Node服务。
 
 
 <br/>
@@ -46,7 +47,8 @@
     │ └── modelproxy                // modelproxy 相关JS库
     │
     ├─┬ public                      // 静态资源
-    │ ├── include                   // 样式文件
+    │ ├── css                       // 样式文件
+    │ ├── sass                      // Sass样式文件
     │ ├── js                        // 脚本文件
     │ ├── img                       // 图片文件
     │ └── lib                       // bower 库资源（如：bootstrap 、jquery 等）
@@ -54,6 +56,7 @@
     ├── .bowerrc                    // bower 指定资源路径配置
     ├── package.json                // npm modules 配置信息
     ├── interface.json              // modelproxy 配置信息
+    ├── interface.mock.json         // modelproxy 配置信息,mock配置
     └── app.js                      // 全局入口
 
 
@@ -77,5 +80,3 @@
 
 
 <br/>
-
-

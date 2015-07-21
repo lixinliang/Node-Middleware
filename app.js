@@ -13,10 +13,17 @@ app.listen(port,function(){
     console.log('service is start on port ' + port);
 });
 
-// 引入模块
+// 引入ModelProxy模块
 var ModelProxy = require( './common/modelproxy/modelproxy' );
 // 初始化引入接口配置文件  （注意：初始化工作有且只有一次）
 ModelProxy.init( './interface.json' );
-
+// 创建model
+var pageModel = new ModelProxy({
+    getPageById: 'Page.getPageById'
+});
+// 创建model集合
+var modelSet = {
+    page: pageModel
+};
 // 引入路由
-require('./routes')(app,ModelProxy);
+require('./routes')(app,modelSet);
