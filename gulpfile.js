@@ -27,7 +27,7 @@ gulp.task('nodemon', function (cb) {
     var called = false;
     return nodemon({
                 script: 'app.js',
-                ext: 'ejs js',
+                ext: 'js',
                 ignore: ['public/**'],
                 env: {'NODE_ENV': 'development'}
     })
@@ -45,7 +45,7 @@ gulp.task('nodemon', function (cb) {
 // 监听服务变化
 gulp.task('browser-sync', ['nodemon'], function(){
     browserSync.init({
-        files: ['public/**'],
+        files: ['public/**','views/**'],
         proxy: 'http://localhost:3000',
         port: 4000,
         browser: ['/Applications/Google\ Chrome\ Canary.app/'],
